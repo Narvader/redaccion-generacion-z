@@ -1,0 +1,12 @@
+languageCode = "es-es"
+title = "El voto imprevisible de la generación Z"
+googleAnalytics = "UA-330997-1"
+disableHugoGeneratorInject = true
+
+[params]
+	comscore = "7215267"
+	chartbeat = "51507"
+	facebookId = "1482570825397489"
+	author = "Cristina Suárez y María Zuil"
+	newsSection = "España"
+	newsImage = "https://www.ecestaticos.com/file/8eff015d48b9503e9a877e69dfb1615a/1554474347-generacion-z-elecciones.png"

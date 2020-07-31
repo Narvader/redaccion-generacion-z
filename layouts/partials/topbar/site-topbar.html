@@ -1,0 +1,83 @@
+<section class="topbar">
+		<div class="container">
+			<div class="topbar__content">
+				<a class="ec-logo" href="https://www.elconfidencial.com/" target="_blank">
+					<amp-img
+						src="https://www.ecestaticos.com/file/cfa46a26d93cdf814cf8cdc8b487eb3a/1539078199-logo-el-confidencial.png"
+						alt="Logo de El Confidencial"
+						title="El Confidencial"
+						width="160"
+						height="18"
+						layout="intrinsic">
+					</amp-img>
+				</a>
+				<div class="share">
+					<amp-social-share type="twitter" width="30" height="22"></amp-social-share>
+					<amp-social-share type="facebook" width="30" height="22" data-param-app_id="{{ $.Site.Params.FacebookId }}"></amp-social-share>
+					<amp-social-share type="linkedin" width="30" height="22"></amp-social-share>
+					<amp-social-share type="whatsapp" width="30" height="22" media="(max-width: 767px)"></amp-social-share>
+				</div>
+				<amp-analytics type="googleanalytics" id="gaTopbar">
+					<script type="application/json">
+						{
+							"vars": {
+								"account": "{{ .Site.GoogleAnalytics }}"
+							},
+							"triggers": {
+								"trackClickOnLogoEC" : {
+									"on": "click",
+									"selector": ".ec-logo",
+									"request": "event",
+									"vars": {
+										"eventCategory": "Especial - {{ .Site.Title }}",
+										"eventAction": "clic",
+										"eventLabel": "Logo El Confidencial"
+									}
+								},
+								"trackClickOnFacebook" : {
+									"on": "click",
+									"selector": "amp-social-share[type='facebook']",
+									"request": "event",
+									"vars": {
+										"eventCategory": "Especial - {{ .Site.Title }}",
+										"eventAction": "share",
+										"eventLabel": "Facebook"
+									}
+								},
+								"trackClickOnTwitter" : {
+									"on": "click",
+									"selector": "amp-social-share[type='twitter']",
+									"request": "event",
+									"vars": {
+										"eventCategory": "Especial - {{ .Site.Title }}",
+										"eventAction": "share",
+										"eventLabel": "Twitter"
+									}
+								},
+								"trackClickOnLinkedIn" : {
+									"on": "click",
+									"selector": "amp-social-share[type='email']",
+									"request": "event",
+									"vars": {
+										"eventCategory": "Especial - {{ .Site.Title }}",
+										"eventAction": "share",
+										"eventLabel": "LinkedIn"
+									}
+								},
+								"trackClickOnWhatsApp" : {
+									"on": "click",
+									"selector": "amp-social-share[type='whatsapp']",
+									"request": "event",
+									"vars": {
+										"eventCategory": "Especial - {{ .Site.Title }}",
+										"eventAction": "share",
+										"eventLabel": "WhatsApp"
+									}
+								}
+							}
+						}
+					</script>
+				</amp-analytics>
+			</div>
+		</div>
+	</section>
